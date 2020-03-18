@@ -1,0 +1,38 @@
+<html>
+<head></head>
+<body>
+<script>
+    function addEmployee() {
+        empID = document.getElementById("empId")
+        empName = document.getElementById("empName")
+        name = empName.value
+        name = name.replace(' ','%20')
+        url = "http://45.56.116.34:8080/employees/"+
+              empID.value+"/"+name+"/add"
+        location.assign(url)
+        return false 
+    }
+
+    function listEmployees() {
+        url = "http://45.56.116.34:8080/employees"
+        location.assign(url)
+        return false 
+    }
+</script>
+<div id="neoform">
+    <form id="neo4jmenu">
+        &nbsp;&nbsp;&nbsp;<button type="button" onclick="listEmployees()">List All Employees</button>
+        <hr aligne="center">
+        <b>Add a New Employee</b><br><br>
+        <lable>Employee ID:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" id="empId"><br><br>
+        <lable>Employee Name:&nbsp;&nbsp;</label>
+        <input type="text" id="empName"><br><br>
+        &nbsp;&nbsp;&nbsp;<button type="button" onclick="addEmployee()">Add New Employee</button><br><br>
+    </form>
+</div>
+<div id="htmlOut">
+
+</div>
+</body>
+</html>
