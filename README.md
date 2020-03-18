@@ -75,5 +75,7 @@ From there you can exercise the API.
 
 ### Notes
 
+This implementation was my interpretation of the assignment to the best of my understanding. Perhaps a different definition of the API could make the API more RESTful, but as there was a time factor in getting the assignment done, the API exists in its form presented here. 
 
+The index.js file contains elements that pertain specifically to the http serving of the API. These elements can be changed or removed as needed. Perhaps the API can be better packaged to make it more portable. 
 
