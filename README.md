@@ -46,21 +46,34 @@ Once you have neo4j started, open a command shell or terminal and go into the ne
 directory. Type the command 'node index.js'. Once you can see that node started without
 errors then open a web browser and try out the API. 
 
-* If you try http://localhost:8080 you will see a link to list all Employee nodes
+* If you try http://localhost:8080/employees you will see a listing of all of the employees
 in the database. 
 
 * Using the URL http://localhost:8080/employees/766543/Wilma%20Flintstone/add you will add
 Wilma Flintstone to the database with empolyee id 766543.
 
-* You can check the above action by listing the employees once more. 
+* Without the http server in place there will be links displayed for the results of the above
+operations that will not work. 
 
 ### You Can Try It Out Here
 
+An index.html file is included in the repository for seeing the API in action. The Python 3 http
+was used to connect to the Node.js application. The Python http server can be started by placing 
+the index.html into a directory, moving into that directory, and then issuing the command:
+
+python3 -m http.server 9001
+
+which will start the server on port 9001. Navigating to http://localhost:9001 the menu page will 
+be displayed that will let you either list all of the employees or to add an employee to the 
+database. 
+
 An installation of the Node.js implementation of the API has been deployed on a Linode instance. 
 
-To see the root resource: http://45.56.116.34:8080
+To see the menu page go to: http://45.56.116.34:9001
 
-For a listing of all Employee nodes: http://45.56.116.34:8080/employees
+From there you can exercise the API.
 
-To add Betty Rubble to the database: http://localhost:8080/employees/998833/Betty%20Rubble/add
+### Notes
+
+
 
