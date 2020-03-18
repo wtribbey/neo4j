@@ -3,7 +3,7 @@ const express = require('express')
 const app = express();
 // setup the neo4j driver and session
 const neo4j = require('neo4j-driver')
-const driver = neo4j.driver("bolt://45.56.116.34", neo4j.auth.basic('neo4j', 'minnie'))
+const driver = neo4j.driver("bolt://server ip or hostname", neo4j.auth.basic(user, password))
 const session = driver.session()
 
 // at the root node return 
