@@ -59,6 +59,8 @@ Wilma Flintstone to the database with empolyee id 766543.
 An installation of the Node.js implementation of the API has been deployed on a Linode instance. 
 
 To see the root resource: http://45.56.116.34:8080
+
 For a listing of all Employee nodes: http://45.56.116.34:8080/employees
+
 To add Betty Rubble to the database: http://localhost:8080/employees/998833/Betty%20Rubble/add
 
