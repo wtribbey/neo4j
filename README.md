@@ -16,7 +16,7 @@ employee was added is returned as html.
 The API was implemented using a neo4j installation and a node.js installation. The code for the API is
 contained in the file index.js. 
 
-## Setup of Components
+### Setup of Components
 Required Components
 1. neo4j Community Editon version 4.0.1
 2. Node.js version 12.6.1 
@@ -40,17 +40,25 @@ directory.
 8. Edit the index.js file and replace the words 'user' and 'password' in the line that 
 begins with 'const driver' with the actual user name and password for the neo4j database. 
 
-## Starting the neo4japp
+### Starting the neo4japp
 
 Once you have neo4j started, open a command shell or terminal and go into the neo4japp
 directory. Type the command 'node index.js'. Once you can see that node started without
 errors then open a web browser and try out the API. 
 
-* If you try (http://)localhost:8080 you will see a link to list all Employee nodes
+* If you try http://localhost:8080 you will see a link to list all Employee nodes
 in the database. 
 
-* Using the URL (http://)localhost:8080/employees/766543/WilmaFlintstone/add you will add
+* Using the URL http://localhost:8080/employees/766543/Wilma%20Flintstone/add you will add
 Wilma Flintstone to the database with empolyee id 766543.
 
 * You can check the above action by listing the employees once more. 
+
+### You Can Try It Out Here
+
+An installation of the Node.js implementation of the API has been deployed on a Linode instance. 
+
+To see the root resource: http://45.56.116.34:8080
+For a listing of all Employee nodes: http://45.56.116.34:8080/employees
+To add Betty Rubble to the database: http://localhost:8080/employees/998833/Betty%20Rubble/add
 
